@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(
   cookieSession({
     signed: false, // doesnt need encryption
-    secure: process.env.NODE_ENV !== "test", // must be on https, so it only sets cookie if its https and jest sets NODE_ENV to test when run
+    secure: false, // must be on https, so it only sets cookie if its https and jest sets NODE_ENV to test when run // process.env.NODE_ENV !== "test"
   })
 );
 
